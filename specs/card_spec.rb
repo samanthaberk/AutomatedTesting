@@ -53,12 +53,24 @@ describe Card do
 
     it "Can retrieve the value of the card using a `.value`." do
       # ensure that `.value works as expected`
+      two_of_diamonds = Card.new(2, :diamonds)
+      two_of_diamonds.value.must_be_instance_of Integer
+      two_of_diamonds.value.must_equal 2
+
+      ace_of_spades = Card.new(1, :spades)
+      ace_of_spades.value.must_be_instance_of String
+      ace_of_spades.value.must_equal "Ace"
     end
 
     it "Can retrieve the value of the card using a `.suit`." do
       # ensure that `.suit works as expected returning the symbol of the suit`
+      ten_of_clubs = Card.new(10, :clubs)
+      ten_of_clubs.suit.must_be_instance_of String
+      ten_of_clubs.suit.must_equal "clubs"
 
+      queen_of_hearts = Card.new(12, :hearts)
+      queen_of_hearts.suit.must_be_instance_of String
+      queen_of_hearts.suit.must_equal "hearts"
     end
   end
-
 end
