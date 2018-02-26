@@ -1,4 +1,5 @@
-
+require "awesome_print"
+require "pry"
 # card.rb
 
 class Card
@@ -21,6 +22,8 @@ class Card
       return "Queen of #{suit.to_s}"
     when 13
       return "King of #{suit.to_s}"
+    when 1
+      return "Ace of #{suit.to_s}"
     end
   end
 
