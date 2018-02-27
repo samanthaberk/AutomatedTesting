@@ -3,7 +3,7 @@ require "pry"
 # card.rb
 
 class Card
-  attr_reader :value, :suit
+  attr_accessor :value, :suit
 
   def initialize(value, suit)
     # Assign value to face/numbered
